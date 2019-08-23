@@ -3,8 +3,578 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <link rel="stylesheet" href="../node_modules/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../css/indexCSS.css">
+    <link rel="stylesheet/less" href="../css/index.less">
 </head>
 <body>
+<div class="container-fluid">
+    <div class="mod_container row">
+        <div id="shortcut">
+            <div class="w list-inline">
+                <ul class="fl">
+                    <li class="shortcut_btn dropdown" id="ttbar-mycity">
+                        <a href="javascript:;" id="areamini" class="dt cw-icon ui-areamini-text-wrap">
+                            <i class="iconfont iconfont-location">&#xe600;</i>
+                            <span class="ui-areamini-text">北京</span>
+                        </a>
+                        <div class="dd">
+                            <div class="ui">
+                                <table class="item table table-hover">
+                                    <tbody>
+                                    <tr>
+                                        <th><a href="#">北京</a></th>
+                                        <th><a href="#">北京</a></th>
+                                        <th><a href="#">北京</a></th>
+                                        <th><a href="#">北京</a></th>
+                                        <th><a href="#">北京</a></th>
+                                    </tr>
+                                    <tr>
+                                        <th><a href="#">北京</a></th>
+                                        <th><a href="#">北京</a></th>
+                                        <th><a href="#">北京</a></th>
+                                        <th><a href="#">北京</a></th>
+                                        <th><a href="#">北京</a></th>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <table class="item table table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>特别地区</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <th>香港</th>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="inter"></div>
+                            <div class="inter"></div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="fr">
+                    <li id="ttbar-login" class="shortcut_btn fore1 dropdown">
+                        <a href="javascript:;" class="link-login">你好，请登录</a>
+                        &nbsp;&nbsp;
+                        <a href="javasctipt:;" class="link-regist style-red">免费注册</a>
+                    </li>
+                    <li class="spacer"></li>
+                    <li class="shortcut_btn fore2">
+                        <div class="dt"><a href="javascript:;">我的订单</a></div>
+                    </li>
+                    <li class="spacer"></li>
+                    <li id="ttbar-myjd" class="shortcut_btn fore3 dropdown">
+                        <div class="dt cw-icon">
+                            <a href="javascript:;">我的京东</a>
+                            <i class="iconfont">&#xe601;</i>
+                        </div>
+                    </li>
+                    <li class="spacer"></li>
+                    <li class="shortcut_btn fore4">
+                        <div class="dt">
+                            <a href="javascript:;">京东会员</a>
+                        </div>
+                    </li>
+                    <li class="spacer"></li>
+                    <li class="shortcut_btn fore5 dropdown className shortcut_btn_company">
+                        <div class="dt cw-icon">
+                            <a href="javascript:;">企业采购</a>
+                            <i class="iconfont">&#xe601;</i>
+                        </div>
+                    </li>
+                    <li class="spacer"></li>
+                    <li id="ttbar-serv" class="shortcut_btn fore8 dropdown">
+                        <div id="shortcutServiceButton" class="dt cw-icon">客户服务<i class="iconfont">&#xe601;</i></div>
+                    </li>
+                    <li class="spacer"></li>
+                    <li id="ttbar-navs" class="shortcut_btn fore9 dropdown">
+                        <div id="shortcutSitenavButton" class="dt cw-icon">网址导航<i class="iconfont">&#xe601;</i></div>
+                    </li>
+                    <li class="spacer"></li>
+                    <li id="J_mobileq" class="shortcut_btn fore10 mobile">
+                        <div class="dt mobile_txt">手机京东</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="header">
+            <div class="w">
+                <div id="logo" class="logo">
+                    <h3 class="logo_tit">
+                        <a href="javascript:;" class="logo_tit_lk"></a>
+                    </h3>
+                </div>
+                <div class="search">
+                    <div class="search_m">
+                        <div class="input-group form">
+                            <input type="text" class="h form-control" placeholder="Search for...">
+                            <span class="input-group-btn search_a">
+                                    <button class="btn btn-default search_a" type="button">
+                                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                    </button>
+                                </span>
+                        </div>
+                    </div>
+                    <div id="settleup" class="dropdown">
+                        <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true">
+                            <span class="badge">0</span>
+                        </span>
+                        <span style="color:red;">我的购物车</span>
+                    </div>
+                </div>
+                <div class="btn-group btn-group-xs" role="group" aria-label="...">
+                    <button type="button" class="btn btn-default">Left</button>
+                    <button type="button" class="btn btn-default">Middle</button>
+                    <button type="button" class="btn btn-default">Right</button>
+                </div>
+                <div class="btn-group btn-group-lg" role="group" aria-label="...">
+                    <button type="button" class="btn btn-default">Left</button>
+                    <button type="button" class="btn btn-default">Middle</button>
+                    <button type="button" class="btn btn-default">Right</button>
+                </div>
+                <div class="thum">
+                    <a href="#" class="thumbnail glyphicon glyphicon-qrcode"></a>
 
+                </div>
+            </div>
+        </div>
+        <div class="fs">
+            <div class="fs-inner">
+                <div class="fs-coli1 pull-left">
+                    <div class="j-cate">
+                        <ul class="table">
+                            <li class="table-child"><a href="#" class="btn btn-default btn-lg disabled" role="button">家用电器</a>
+                            </li>
+                            <li class="table-child table-2">
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">手机</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">/</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">运营商</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">/</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">数码</a>
+                            </li>
+                            <li class="table-child table-2">
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">手机</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">/</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">运营商</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">/</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">数码</a>
+                            </li>
+                            <li class="table-child table-2">
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">手机</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">/</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">运营商</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">/</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">数码</a>
+                            </li>
+                            <li class="table-child table-2">
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">手机</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">/</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">运营商</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">/</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">数码</a>
+                            </li>
+                            <li class="table-child table-2">
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">手机</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">/</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">运营商</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">/</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">数码</a>
+                            </li>
+                            <li class="table-child table-2">
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">手机</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">/</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">运营商</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">/</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">数码</a>
+                            </li>
+                            <li class="table-child table-2">
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">手机</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">/</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">运营商</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">/</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">数码</a>
+                            </li>
+                            <li class="table-child table-2">
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">手机</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">/</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">运营商</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">/</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">数码</a>
+                            </li>
+                            <li class="table-child table-2">
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">手机</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">/</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">运营商</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">/</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">数码</a>
+                            </li>
+                            <li class="table-child table-2">
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">手机</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">/</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">运营商</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">/</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">数码</a>
+                            </li>
+                            <li class="table-child table-2">
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">手机</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">/</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">运营商</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">/</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">数码</a>
+                            </li>
+                            <li class="table-child table-2">
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">手机</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">/</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">运营商</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">/</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">数码</a>
+                            </li>
+                            <li class="table-child table-2">
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">手机</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">/</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">运营商</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">/</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">数码</a>
+                            </li>
+                            <li class="table-child table-2">
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">手机</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">/</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">运营商</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">/</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">数码</a>
+                            </li>
+                            <li class="table-child table-2">
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">手机</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">/</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">运营商</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">/</a>
+                                <a href="#" class="btn btn-default btn-lg disabled" role="button">数码</a>
+                            </li>
+                        </ul>
+                        <div class="j-popctn">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="fs-coli2 pull-left">
+                    <div class="slider-l pull-left" role="toolbar">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="https://img10.360buyimg.com/pop/s590x470_jfs/t1/58771/9/7060/89052/5d4bd031E35d83995/ad76c855a07315f9.jpg.webp" alt="..."></div>
+                                <div class="swiper-slide"><img src="https://imgcps.jd.com/ling/45763076372/5a6255S15riF5YeJ5a2j/54mp576O5Lu35LyY6LaF55yB6Jaq/p-5bd8253082acdd181d02f9d8/1c7eb82a.jpg" alt="..."></div>
+                                <div class="swiper-slide"><img src="https://img14.360buyimg.com/pop/s590x470_jfs/t1/80964/25/6937/100062/5d521c53E7179caa8/71532b0ea7c429fa.jpg.webp" alt="..."></div>
+                            </div>
+                            <!-- 如果需要分页器 -->
+                            <div class="swiper-pagination"></div><!--分页器。如果放置在swiper-container外面，需要自定义样式。-->
+
+                            <!-- 如果需要导航按钮 -->
+                            <div class="swiper-button-prev swiper-btn"></div>
+                            <div class="swiper-button-next swiper-btn"></div>
+                        </div>
+
+                    </div>
+                    <div class="slider-r pull-left">
+                        <div class="slider-warpper">
+                            <div id="carousel-example-generic-a" class="carousel slide" data-ride="carousel">
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <li><a href="#"><img src="https://img13.360buyimg.com/babel/s380x300_jfs/t1/72866/29/6707/69647/5d4cd1e5E6966c916/e4aed48cdd3f7964.jpg.webp" alt=""></a></li>
+                                        <li class="item-center"><a href="#"><img src="https://img13.360buyimg.com/babel/s380x300_jfs/t1/72866/29/6707/69647/5d4cd1e5E6966c916/e4aed48cdd3f7964.jpg.webp" alt=""></a></li>
+                                        <li><a href="#"><img src="https://img13.360buyimg.com/babel/s380x300_jfs/t1/72866/29/6707/69647/5d4cd1e5E6966c916/e4aed48cdd3f7964.jpg.webp" alt=""></a></li>
+                                    </div>
+                                    <div class="item">
+                                        <li><a href="#"><img src="https://img10.360buyimg.com/babel/s380x300_jfs/t1/74807/9/6891/15192/5d50b59aE25d42ba6/f8e42d6b8d0750e3.jpg.webp" alt=""></a></li>
+                                        <li class="item-center"><a href="#"><img src="https://img10.360buyimg.com/babel/s380x300_jfs/t1/74807/9/6891/15192/5d50b59aE25d42ba6/f8e42d6b8d0750e3.jpg.webp" alt=""></a></li>
+                                        <li><a href="#"><img src="https://img10.360buyimg.com/babel/s380x300_jfs/t1/74807/9/6891/15192/5d50b59aE25d42ba6/f8e42d6b8d0750e3.jpg.webp" alt=""></a></li>
+                                    </div>
+                                </div>
+
+                                <!-- Controls -->
+                                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fs-coli3 pull-left">
+                    <div id="fs-user" class="fs-user">
+                        <div class="user-inner">
+                            <div class="header">
+                                <div class="pull-left user-avater">
+                                    <img class="img-circle" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAABGdBTUEAALGPC/xhBQAAAAZiS0dEAP8A/wD/oL2nkwAAEB5JREFUeNrtnGmMVVUSgN/v8cdARGEUZAmKyNrohGjcEo0a97jEGDXqD43RUfYRjDExrtFonIxOxhhBTYxGorgByr41yNY7TdMLNA29AE3T3SC4/Kg535lbL9XHe9973dDQ4PtR6XffO3c5362qU6dOnU51dHZKXnouqTyEPMA8wDzAPMC85AHmAeYB5gHmJQ8wDzAPMA8wL3mAeYB5gHmAeTlDALZ3dPxf2tvlkJF2Ff3dyZ8aIAAOHTokbW1t0nrwoLS2tsbKQfebCm2tcL6XAO4ZC5COAuLAgQOyf//+tHCMxIGLBWak3WpnoKkdvQAzdbym1ZPzAAGoffv2peV44MUB61BgRjp5huMEGfa72wAPuofXDmqn0KRctI1zgNXS0tJr8OKgZZOcrMXdq0t/I4jdArjPdbKpqSnd6S4ddRdOemP83hIDLhvA7sDrDrjDhw//QTozaBzPwnPxLPa+3CcngJ3uBlxgz5490tjY6CECw3ZaP1ttbHM3sxoXmq2FlwvAXOB1Bxpy5MgRL3Eg6Ys+m8IL753KVX2BZwWQzc3NXbSqxR0D9wAA3A35DVGft2vXrkR4PQWYDV4SOIXHffn7yy+/pL/jLxZF/3hOniVp0MoJIFB2794tDQ0N/m99fb3/azUS4fPevXvTGopwk+LiYnnkkUdkzpw5/jgOXjaA2bSvu/CQ3377Td555x156qmnZPv27f5YNZJrq5XFPQPHfJ/KxXQVGIIW1dTUSHV1tf8MVEACDlGtVHhr166Va665RkaOHCkLFizw36kpJwEMIfKwdEihaCdVegKP83799Vf/fJMnT5Zbb71VNm3a1AUi1+kyWEbg1C3xzKlsIyeAAIgovLKyMtm8ebNs3LhRahxIhWg1DwhAvummm2TEiBHy5JNP+oexwDJB5KHpwM8//+w1jBfDvSsqKqS0tNTLtm3bpK6uzl+Hdr///ruHkg2efQmY7osvviiXXnqp3H333V5Jjh071gWiwuP5YaDKQ38zAtzrTJKGyM6dO6W2ttarOib5008/yYoVK2T58uX+uzjte/3112X48OFy3XXX+c6qL8wEEFEzX7RokTz//PNy7733ypVXXinjxo2TUaNGyYUXXigXXXSRjB49WiZMmCBXXXWV3HffffLCCy/Ijz/+6M8HQi4AaYfruf/++2XSpEny9ttvd9FChBfIS+UFVlZW+v7yGdipJNOlAyG8HTt2SEV5uRQVFXmAa9askaVLl3qIXAyAdmC5/fbb5bLLLvNtMMGkkdgOKkDm+rfddpsMGjRIzj77bBk4cKCcd955MnjwYBkyZIiXCy64IC0cn3/++b49n7kvGnr06NGsABGAoRS33HKLB6mab7UQTa+qqvICQLQQLqk4eIygCo4TgccJ0OfBtm7d6s23sLBQVq1cKRs2bEiPyhbgF1984duoRuUivO2ZM2fKWWed5aEgSeCQoUOHehk2bFha+vfvL1OmTPFgcglh1B/Sv8WLF//BxyK4KRggQESZ0MJUXMiCNoXwoF7utK/EvaktW7Z4gOvXr/dayI11JLZmrCNVrvAQ2qOxmGu/fv1kwIABaQ20QC1Uq4G051yugQZ2JxbEH4bmi6CN6tMR4AGRz6kw6oZ0HDx8GNqHeVmA69at821tOGMhJs0+4sTGjdzrpZdekhtuuEEuvvjitDmjXYBF+Aww4OIPb7zxRnn55Zf9s+rgExfiZNPGOMEFKQ8AwgSIXQAyEADDwqNRpXsgr30lJd58GYHxgZgnEBmhOdfOUnhjFmImkGE7PV9jMTScAeurr76STz/9VD7++GP55JNP5LPPPpNvv/3WhyKYExqvAfHxxIkMLOoD7QwFxVImAETSAOk8DwE4jfM8PPfwwIvTPh6cvxpUaxDNNfieQSHUxmwS157rxMWCdFKlI8ondne6F8LD7AHDfUOAjAsKDy5IikGj2TUGGOAQtXEaaNzFKIX2EWwyaGC6q1at8n/RQAUIAEA//PDD/jgJShy4TGK1OJy1JCVZuzNzsaY8ffp0D0lHcW2DZSo83ARsUsz5rFNU+1azzQRv2bJlstKNwqi2nZHQ0ccee0zmzZvnO5INjhU7LbQ+NRzhLchsGeuk+XMIkZGY2HPq1Klp7UunvFx7DeQR2DChSDW6B+RAbVq1jh/xeXHwVq9e7X0SQeuSJUvSQaVCpJOAvfnmm/2b2h+lwXIBp/BCiRugwlRYpjxiNm3EDXDtBx980PcTP2jhci59gQuCYsHHA+SDkg3Bqc+z8AicCROImRYuXOjPswkGhA69+uqr8sADD6ShhhAttBCczq1VLMhM2hgHMhtE1bRp06bJW2+95TWxS/baCdeHiRVcVao1ivztlwoOrWO01QEDswUeWvfDDz94eN98841vh4MFomqhQnj00Ufl8ccf98d0NIQWwgvB2URFHMhwhM+mjSFENVWmjMzX+Y1jBaeQUQ4UCS7w8eI+pzrdBfB7aBggFBrHhCloHcEyJonPA55qHvAWOp+BCeMHQ4h0EsfL9Oihhx7y96FDCiA0UwstSXIBmZQaCzWRQYJz0DxeNNfSmC+UJncPtUTltMkd+1GYzDGxHeaJpiFA4xhwarJoHfC+//57D2+584MkHHgJOx08YAHR+kM6B1wekKQCL4DO8H02eFwjTkKQcWYd+karhQDBx9Hne+65R5544gl/bggvnftz4vMD7nponoZvwEyl837uJqin17JocEAYKFTjvvvuOx+4ApOBhwsfZrLtzseX6gRb/aHVRDrLLIGMB+bCgKUgk+BpDlLTaTYvmQlkkkkDg8GC8/B1V199tbzxxhseqg4UoajGKidSfDUuzkUbUbKUTSJoCovRBhVVv4cmYs7FbnABEKHPEfcgeo6uf5AbJIiOg0gn6QhhAjnCyy+/3HeCe+mshTYhOM0IWbEw9frqd0OQmh7Dr3HOBx984KeHd9xxh1cWzNhqmwWnc/lw+Ral0WWO2GwMcGik82M/1JvvLTh7XoO7IH7Om3IAUTuqabJ3333XawDZ4BkzZniwmhyl87RVgLwQFdroZ4VpQQIQcKpxvBSUgFzhtddeK9dff728//77aZMNqxssOF0LScqXwuKEViaghQDElLWjYScROoVm0A6NQBvGjh3rU//PPPOMfPTRR948CO45z5p46AutxvGZ+zIIMk+eNWuW17aCggK56667ZO7cuf56Cs4G3aHoUma24oETCtD7QtcJzdj+AaLxYRozoi3AIDB/5ZVXfEfp8CWXXCJXXHGF3HnnnfL000/739DaDz/8MJ1MAMh7770nr732mp89MCCg1ePHj/eJXI7JiuOKuE+HWeNNqr1R8cndDNrXq7UxtdGcUZMTFqT1YdbHAbHJwQcsIx0LUG+++aYfIYFISn/ixIkyZswYn7pC0Fq+4zfa0JZziBCYDPAygaVuIW6EjhP97ZQUF6GFmICuHVRHA4umyaw/s35NU2jaVsMhXchi1Gdg03m4JjL4jt84T7XaLr/aQSwcpePWYzS9lku5Sq9pIBAp5WCKB0T1i6qRoWgWqCbI+Nq0EaN1JtEXpql2jQb0RSjEpOBbP/NbLqbb6+VtQCQkYm5NB3UdQdPiVvheocWB0zm6TuCt8B2/0Ya2mim2mh8G940xAbjGqsTDfaY+UCHSScxMtUQ7aYHFaZtNGyk8na+rcMz3tKGtamMI0camXhuDObYmQDpiQrRTWmAJROaRCqAi6qR2tDIwxTDfFgdOJ/NxEDNpojXpdKlKBJWRt7Ob8E5ahapfKnUPuM0Bo+OlRmNC0XxbWVR9kATPikK05mx9YggxLe4YiH4q1wN4J7XElwckKEUDPAg372aJtDTyY1bSPk5zb2qyMfASAaKFkSmHg5iPUd1fLENnWadNjTSZGxw1HQMiUqxmGEmYuCw2Pq/Imq+BFw4oleoL0cIIooLEZA8eh9ad8iJzHlxDHTpY5CBu2bzZAyk2yd04kOHvHhwugYHK+EA14apIqh08/J2OsicC3imv0leQjH74o3LWnR1IxMNheQEJTLw08pP4TD/oMAAxIDGaazjkjnc4qXPmSthCcN8R3e+M2ydCp8hs4COpct1VWycly5bJxvnzZeuiRVK0dIkUr1guJatXS2nhOilbv17KN2zwUrG+UCrcXHcbJSYrV0jl4sVSU1goTS4saXUzi/bIx51ocH12p9Lho0elra5WSidPkKJhA6Vk1AgpGTNaisaNlS0TxsvmiRNkU4H762RrwQQpcXPh8oIC2T6pQGpcm7qRw6Xh7+OkvaJcOo8d+/Nt9ep0AA+WlUjV4P5Sc85fpObcflJ97rmyY+BAqXJ/qwYMkB0D+ku1k1r3eeegQVI/ZIjsGTpUGgcPluaB50jL3/4qhzYUSsefDaAPdSirpUbn3/+Ssin/kIppU6R82lQpmz5dyp1UzJghlbNmSuU/Z0nVs89K9exnpWb2bKl77jmpf26O7J4zW1r++x9pczOgjl4y2z7pA9X/1RPwVm6XXbsbpH5vo+x2IBqammWPm+g3skDvRtFm6pSptW5vlwPk+IDOJiAyQQh7WkhlRSV2Hb24Xy7VF+ARk/nUFWktlkjd33qmXOQJyUizMEWqnm0HZn9KK7XUumQZyAFSU649bdpi1jXOCICaOwQWwjoKM4Rd0TFx2x431dLqV9JOgGm1W81idm0qRA872udxsJcgpk4lPDrrM9NRltrn8KL0U73VPt0ZBcCExfI48at9DrxW/fcGxFMDMFpf1ZQ+msZE328fCCoc7MadsGwjad+waiG/6bnp9iysn0CIpwSgLSXWtL2uodh1EwXYHEHYF2lgHEQL0h5zDrk+a8pt3cg4971kAvnBqGZG1y2YepFE8Pm6DBqYqe4lk+AacAUHom0UunHwtAOoeUGbHQYki0NkWPguLFLaG7OxMdP+4lAAhXbzgrqYMv4wx4WjPgOQILk+2kLhtc+BIhnAfhJSTTbZmU6/Gy2MrXvJAlL9IDU9vBDd56z+8LQBqOkrNE7XhPm8Zu1amT9/vu9cUtlG3LJkCDJpnRdYBNJU+JM71B0AVkNPC4CajVbt0k17LKBTNqfmHK4fh2u7mYorkzYvApCKMirMOM/utvdprr4OUGvrajVIjrSPpCclGtTBaBxoJVxN00ElqS4wCeihqP7x888/TxfBd9HC4/CFJw0gnVeAWm1AcnTe3Lm+ukA3NOqaRa1ZhE+qxAorVeOA6vYxBhIAcj7tT5QWpk6W+dZFJRzejNG+qAYRDST77Es7tEIh2uijYmtswjgxrtDSaqfGjpz/5Zdf+mtxbnM0Q1HpacLhpAD0xZem3AIouk2MEdgDNDukbGmHru+GK2txBUuhdtptZ5zz9ddfpysltFZRfWV7Xwe4I+o8HWctg7prOkN4QWlxuJHPlnXoQpGtOrCrbCHUMAgHEOcwiLC+gj8Eug2L+jRAnLTdDUU4URhtUmQAYVUtLChKqofRpcv0glJQiaAvSUvmdNDge+oEAa3/KkBNHpA9Bfg/xTf44yGrdiQAAAAASUVORK5CYII=" alt="">
+                                </div>
+                                <div class="pull-left">
+                                    <p>
+                                    <span class="hi">
+                                        Hi~欢迎逛京东!
+                                    </span>
+                                    </p>
+                                    <p>
+                                        <span>登陆</span>&nbsp;|&nbsp;<span>注册</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="footer">
+                                <p class="pull-left" >新人福利</p>
+                                <p class="pull-left" >PLUS会员</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fs-news">
+                        <div class="news">
+                            <div class="news-hd">
+                                <h5>京东快报</h5>
+                                <a href="#">
+                                    更多
+                                    <i class="glyphicon glyphicon-chevron-right"></i>
+                                </a>
+                            </div>
+                            <ul class="news-list">
+                                <li class="news-item">
+                                    <a href="#">
+                                        <span class="news-tag">
+                                            热门
+                                        </span>
+                                        华为鸿蒙系统，操作方式类似iOS 13，花粉们都尖叫了
+                                    </a>
+                                </li>
+                                <li class="news-item">
+                                    <a href="#">
+                                        <span class="news-tag">
+                                            热门
+                                        </span>
+                                        华为鸿蒙系统，操作方式类似iOS 13，花粉们都尖叫了
+                                    </a>
+                                </li>
+                                <li class="news-item">
+                                    <a href="#">
+                                        <span class="news-tag">
+                                            热门
+                                        </span>
+                                        华为鸿蒙系统，操作方式类似iOS 13，花粉们都尖叫了
+                                    </a>
+                                </li>
+                                <li class="news-item">
+                                    <a href="#">
+                                        <span class="news-tag">
+                                            热门
+                                        </span>
+                                        华为鸿蒙系统，操作方式类似iOS 13，花粉们都尖叫了
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tbh-conve">
+                        <!-- 十二宫格 -->
+                        <div class="conve">
+                            <ul class="conve-list">
+                                <li class="conve-item-1 conve-float min">
+                                    <a href="#">
+                                        <span class="conve-item-icon tbh-icon"></span>
+                                        <p>充话费</p>
+                                    </a>
+                                </li>
+                                <li class="conve-item-2 conve-float min">
+                                    <a href="#">
+                                        <span class="conve-item-icon tbh-icon"></span>
+                                        <p>旅行</p>
+                                    </a>
+                                </li>
+                                <li class="conve-item-3 conve-float min">
+                                    <a href="#">
+                                        <span class="conve-item-icon tbh-icon"></span>
+                                        <p>车险</p>
+                                    </a>
+                                </li>
+                                <li class="conve-item-4 conve-float min">
+                                    <a href="#">
+                                        <span class="conve-item-icon tbh-icon"></span>
+                                        <p>游戏</p>
+                                    </a>
+                                </li>
+                                <li class="conve-item-5 conve-float min">
+                                    <a href="#">
+                                        <span class="conve-item-icon tbh-icon"></span>
+                                        <p>彩票</p>
+                                    </a>
+                                </li>
+                                <li class="conve-item-6 conve-float min">
+                                    <a href="#">
+                                        <span class="conve-item-icon tbh-icon"></span>
+                                        <p>电影</p>
+                                    </a>
+                                </li>
+                                <li class="conve-item-7 conve-float min">
+                                    <a href="#">
+                                        <span class="conve-item-icon tbh-icon"></span>
+                                        <p>酒店</p>
+                                    </a>
+                                </li>
+                                <li class="conve-item-8 conve-float min">
+                                    <a href="#">
+                                        <span class="conve-item-icon tbh-icon"></span>
+                                        <p>理财</p>
+                                    </a>
+                                </li>
+                                <li class="conve-item-9 conve-float min">
+                                    <a href="#">
+                                        <span class="conve-item-icon tbh-icon"></span>
+                                        <p>找服务</p>
+                                    </a>
+                                </li>
+                                <li class="conve-item-10 conve-float min">
+                                    <a href="#">
+                                        <span class="conve-item-icon tbh-icon"></span>
+                                        <p>演出</p>
+                                    </a>
+                                </li>
+                                <li class="conve-item-11 conve-float min">
+                                    <a href="#">
+                                        <span class="conve-item-icon tbh-icon"></span>
+                                        <p>水电煤</p>
+                                    </a>
+                                </li>
+                                <li class="conve-item-12 conve-float min">
+                                    <a href="#">
+                                        <span class="conve-item-icon tbh-icon"></span>
+                                        <p>火车票</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="app" class="row">
+        <div class="j-seck container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="seck col-lg-2"></div>
+                        <div class="seck col-lg-8">
+                            <div class="row slider-list">
+                                <div class="swiper-container1">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide col-lg-12">
+                                            <div class="col-lg-3">1-1</div>
+                                            <div class="col-lg-3">1-2</div>
+                                            <div class="col-lg-3">1-3</div>
+                                            <div class="col-lg-3">1-4</div>
+                                        </div>
+                                        <div class="swiper-slide col-lg-12">
+                                            <div class="col-lg-3">2-1</div>
+                                            <div class="col-lg-3">2-2</div>
+                                            <div class="col-lg-3">2-3</div>
+                                            <div class="col-lg-3">2-4</div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="seck col-lg-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="j-spec container">
+            <div class="row">
+                <div class="j-top col-lg-6">
+                    <!--<div class="a"></div>-->
+                </div>
+                <div class="j-lightning col-lg-6">
+                    <!--<div class="a"></div>-->
+                </div>
+            </div>
+        </div>
+        <!--<div class="j-pmd container">-->
+            <!--<div class="row">-->
+                <!--<div class="col-lg-2"></div>-->
+                <!--<div class="col-lg-10">-->
+                    <!--<div class="row">-->
+                        <!--<div class="swiper-container3 row">-->
+                            <!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
+                                <!--<div class="swiper-wrapper col-lg-2">-->
+                                    <!--<div class="swiper-slide">Slide 1</div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-wrapper col-lg-2">-->
+                                    <!--<div class="swiper-slide">Slide 2</div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-wrapper col-lg-2">-->
+                                    <!--<div class="swiper-slide">Slide 3</div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-wrapper col-lg-2">-->
+                                    <!--<div class="swiper-slide">Slide 4</div>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-wrapper col-lg-2">-->
+                                    <!--<div class="swiper-slide">Slide 5</div>-->
+                                <!--</div>-->
+                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                            <!--&lt;!&ndash; 如果需要滚动条 &ndash;&gt;-->
+                            <!--<div class="swiper-scrollbar"></div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+</div>
+<script src="../js/less-2.5.3.min.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script src="../node_modules/swiper/dist/js/swiper.min.js"></script>
+<script language="javascript">
+    // $('.carousel').carousel({
+    //     interval:2000,
+    // });
+    var mySwiper = new Swiper ('.swiper-container', {
+        // direction: 'vertical', // 垂直切换选项
+        // loop: true, // 循环模式选项
+        autoplay:true,
+        // 如果需要分页器
+        // pagination: {
+        //     el: '.swiper-pagination',
+        // },
+        effect:"fade",
+        // 如果需要前进后退按钮
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    var mySwiper1 = new Swiper ('.swiper-container1', {
+        // direction: 'vertical', // 垂直切换选项
+        loop: true,
+        effect:"slide",
+        // autoplay:true,
+        // 如果需要前进后退按钮
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    var mySwiper1 = new Swiper ('.swiper-container1', {
+        // direction: 'vertical', // 垂直切换选项
+        loop: true,
+        effect:"slide",
+        autoplay:true,
+    });
+
+</script>
 </body>
 </html>
